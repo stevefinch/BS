@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    height: 10vw;
+    width: 100%;
+    background-color: orangered;
+    background-image: url("Three-Sisters1.jpg");
+    background-size: cover;
+
+    text-align: center;
+}
+
+.nav-menu{
+    list-style-type: none;
+    width: 1320px;
+    margin-top: 30px;
+    margin: 0px auto;
+    padding-top: 3px;
+}
+
+.sub-menu{
+    list-style-type: none;
+    z-index: 999;
+}
+
+#nav-menu{
+    /*orangered rgb with alpha channel to zero for full transparency */
+    /*
+    background: rgba(255, 69, 0, 0.0); 
+    */
+
+}
+
+ul#nav-menu li{
+    width: 120px;
+    text-align: center;
+    position: relative;
+    float: left;
+    margin: 0px auto;
+    background: rgba(255, 69, 0, 0.4);
+}
+
+ul#nav-menu li:hover > a {
+    background-color: #ffc063;
+}
+
+ul#nav-menu li:hover a:hover {
+    background-color: #eded07;
+}
+
+ul#nav-menu ul.sub-menu {
+    display: none;
+    position: absolute;
+
+}
+
+ul#nav-menu li:hover .sub-menu {
+    display: block;
+}
+
+ul#nav-menu a{
+    text-decoration: none;
+    display: block;
+    width: 120px;
+    height: auto;
+    line-height: 20px;
+
+}
+
+a {
+    color: yellow;
+    line-height: 2vw;
+}
+
+a:hover {
+    color: blue;
+}
+
+h1 {
+    font-family: Arial;
+    color: green;
+    letter-spacing: 6px;
+}
+
+footer {
+    /*
+    height: 4vw;
+    width: 100vw;
+    */
+    width: 100%;
+    height: 5%;
+    background-color: orangered;
+    text-align: center;
+    color: white;
+    line-height: 4vw;
+    position: fixed;
+    bottom: 0;
+}
+
+div {
+    width: 85vw;
+    height: 50vw;
+    position: relative;
+    top: -70px;
+    left: 5vw;
+    padding-left: 2vw;
+    box-shadow: 2px 2px grey;
+
+    border-bottom:1px solid green;
+    border-left:1px solid green;
+    border-right:1px solid green;
+}
+
+img {
+    height: 55%;
+    width: 55%;
+    display: inline-block;
+    margin-right: 40px;
+
+    object-fit:cover;
+    border:4px double green ;
+    border-radius: 24px;
+    box-shadow: 2px 2px grey;    
+}
+
+p{
+    display: inline;
+   text-indent: 50px;
+   line-height: 35px;
+}
+
+#par-1 { /*old p ID */
+    display: inline;
+   text-indent: 50px;
+   line-height: 35px;
+}
+
+form{
+    display: none;
+}
+/*
+TODO: change so that #info-menu displays bullets
+ul#info-menu li {
+    list-style-image: url("bullet_ball_glass_green.png");
+}
+*/
+
+.info-list{
+    list-style-image: url('bullet_ball_glass_green.png');
+}
