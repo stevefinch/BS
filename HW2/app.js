@@ -22,12 +22,7 @@ document.querySelector('.main-img').addEventListener('click', function() {
 });
 
 
-document.querySelector('.nav-menu').addEventListener('mouseover', function() {
-	document.querySelector('.nav-menu').style.background = '#FF4500';
-	if (document.querySelector('.nav-menu').addEventListener('onmouseout'), function(){
-		document.querySelector('.nav-menu').style.background = none;
-	});
-});
+/* Need to figure out pclick() to keep DRY. I'm guessing I need to force type for string concatanation to be used for getElemByID param */
 
 function pclick(){
 	if (document.getElementById('par-0')) {
@@ -39,22 +34,47 @@ function pclick(){
 	}
 }
 
-function _switch(){
+function _switch0(){
 	document.querySelector('p').style.display = 'none';
-	document.querySelector('form').style.display = 'inline';
+	document.querySelector('textarea').style.display = 'inline';
+	document.querySelector('button').style.display = 'inline'
 }
 
-document.querySelector('p').addEventListener('dblclick', function(){
-	var place_holder = document.querySelector('p').innerHTML;
-	document.querySelector('form').innerHTML = place_holder;
-	console.log(place_holder);
-	_switch();
+function _switch1(){
+	document.querySelector('p').style.display = 'inline';
+	document.querySelector('textarea').style.display = 'none';
+	document.querySelector('button').style.display = 'none'
+}
+
+
+document.getElementById('par-0').addEventListener('dblclick', function() {
+  var place_holder = document.getElementById('par-0').innerHTML;
+  console.log(place_holder);
+  document.getElementById('text-0').value = place_holder;
+
+  // console.log(pclick());
+  // console.log(place_holder);
+  _switch0();
 });
 
-document.getElementById('#par-' + String(pclick())).addEventListener('dblclick', function(){
-	var place_holder = document.querySelector('p').innerHTML;
-	document.querySelector('form').innerHTML = place_holder;
-	console.log(pclick());
-	console.log(place_holder);
-	_switch();
+document.getElementById('par-1').addEventListener('dblclick', function() {
+  var place_holder = document.getElementById('par-1').innerHTML;
+  console.log(place_holder);
+  document.getElementById('text-1').value = place_holder;
+
+  // console.log(pclick());
+  // console.log(place_holder);
+  _switch0();
+});
+
+document.getElementById('button-0').addEventListener('click', function() {
+	var place_holder = document.getElementById('text-0').innerHTML;
+	document.getElementById('par-0').innerHTML = place_holder;
+	_switch1();
+});
+
+document.getElementById('button-1').addEventListener('click', function() {
+	var place_holder = document.getElementById('text-1').innerHTML;
+	document.getElementById('par-1').innerHTML = place_holder;
+	_switch1();
 });

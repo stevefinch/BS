@@ -138,16 +138,18 @@ p{
    line-height: 35px;
 }
 
-form{
+textarea{
+    display: none;
+    width: 30%;
+    height: 30%;
+}
+
+button{
     display: none;
 }
-/*
-TODO: change so that #info-menu displays bullets
-ul#info-menu li {
-    list-style-image: url("bullet_ball_glass_green.png");
-}
-*/
+
 
 .info-list{
     list-style-image: url('bullet_ball_glass_green.png');
 }
+
