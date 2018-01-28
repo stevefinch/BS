@@ -68,13 +68,13 @@ document.getElementById('par-1').addEventListener('dblclick', function() {
 });
 
 document.getElementById('button-0').addEventListener('click', function() {
-	var place_holder = document.getElementById('text-0').innerHTML;
+	var place_holder = document.getElementById('text-0').value;
 	document.getElementById('par-0').innerHTML = place_holder;
 	_switch1();
 });
 
 document.getElementById('button-1').addEventListener('click', function() {
-	var place_holder = document.getElementById('text-1').innerHTML;
+	var place_holder = document.getElementById('text-1').value;
 	document.getElementById('par-1').innerHTML = place_holder;
 	_switch1();
 });
